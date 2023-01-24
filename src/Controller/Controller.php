@@ -56,4 +56,21 @@ abstract class Controller
     {
         return self::$twigLoader;
     }
+
+    public function getFormField(string $field, $default = null)
+    {
+        if(!isset($_POST[$field])) {
+            return (null === $default) ? '' : $default;
+        }
+        return $_POST[$field];
+    }
+
+    public function clean(string $data): string
+    {
+        $data = trim($data);
+        $data = strip_tags($data);
+        $data = htmlentities($data);
+
+        return $data;
+    }
 }

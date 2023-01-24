@@ -1,1 +1,32 @@
-<h1>Test</h1>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% block sidebar %}
+        <div>
+            <div>
+                Menu principal
+            </div>
+
+            <div>
+                <p>posts</p>
+                <p><a href="/index.php?c=article&a=addArticlePage">Ajouter article</a></p>
+                <p>Brouillon</p>
+                <p>Planifiés</p>
+                <p>Corbeille</p>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block content %}
+        {% if articles is defined %}
+            {% for article in articles %}
+
+                <p>{{ article.title | e }}</p>
+                <p>{{ article.content | e }}</p>
+
+            {% endfor %}
+
+        {% endif %}
+    {% endblock %}
+
+{% endblock %}

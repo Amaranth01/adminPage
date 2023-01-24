@@ -8,6 +8,14 @@
     <title>Admin menu</title>
 </head>
 <body>
-<h1>Test</h1>
+
+{% block body %}
+
+    {% block sidebar %}{% endblock %}
+
+    {% block content %}{% endblock %}
+
+{% endblock %}
+
 </body>
 </html>
