@@ -21,8 +21,8 @@
         {% if articles is defined %}
             {% for article in articles %}
 
-                <p>{{ article.title | e }}</p>
-                <p>{{ article.content | e }}</p>
+                <p>{{ article.article_title | e }}</p>
+                <p>{{ article.article_content | e }}</p>
 
             {% endfor %}
 
