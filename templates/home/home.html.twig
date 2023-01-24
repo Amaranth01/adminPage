@@ -2,12 +2,13 @@
 
 {% block body %}
     {% block sidebar %}
-        <div>
-            <div>
+        <div class="sidebar">
+            <div id="goMenu">
                 Menu principal
             </div>
 
-            <div>
+            <div class="list">
+
                 <p>posts</p>
                 <p><a href="/index.php?c=article&a=addArticlePage">Ajouter article</a></p>
                 <p>Brouillon</p>
@@ -18,15 +19,16 @@
     {% endblock %}
 
     {% block content %}
-        {% if articles is defined %}
-            {% for article in articles %}
-
-                <p>{{ article.article_title | e }}</p>
-                <p>{{ article.article_content | e }}</p>
-
-            {% endfor %}
-
-        {% endif %}
+        <div class="content">
+            {% if articles is defined %}
+                {% for article in articles %}
+                    <div class="listArticle">
+                        <h2>{{ article.article_title | e }}</h2>
+                        <p>{{ article.article_content | e }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
     {% endblock %}
 
 {% endblock %}

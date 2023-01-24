@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/Amaranth01/todo/issues"
   },
-  "homepage": "https://github.com/Amaranth01/todo#readme"
+  "homepage": "https://github.com/Amaranth01/todo#readme",
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  }
 }

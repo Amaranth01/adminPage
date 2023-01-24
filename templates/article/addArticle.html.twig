@@ -1,9 +1,31 @@
-<form action="/index.php?c=article&a=add-article" method="post">
-    <label for="title">Titre de l'article</label>
-    <input type="text" id="title" name="title">
+{% extends 'base.html.twig' %}
 
-    <label for="content">Contenu de votre article</label>
-    <textarea name="content" id="content" cols="40" rows="30"></textarea>
+{% block body %}
+    {% block sidebar %}
+        <div class="sidebar">
+            <div>
+                <a href="/index.php?c=home&a=index">Menu principal</a>
+            </div>
 
-    <input type="submit" name="submit" id="submit" value="Poster l'article">
-</form>
+            <div class="list">
+
+                <p>posts</p>
+                <p>Ajouter article</p>
+                <p>Brouillon</p>
+                <p>Planifiés</p>
+                <p>Corbeille</p>
+            </div>
+        </div>
+    {% endblock %}
+
+    <form action="/index.php?c=article&a=add-article" method="post">
+        <label for="title">Titre de l'article</label>
+        <input type="text" id="title" name="title">
+
+        <label for="content">Contenu de votre article</label>
+        <textarea name="content" id="content" cols="40" rows="30"></textarea>
+
+        <input type="submit" name="submit" id="submit" value="Poster l'article">
+    </form>
+
+{% endblock %}

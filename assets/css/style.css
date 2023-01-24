@@ -8,4 +8,76 @@ body {
     width: 100%;
     min-height: 96vh;
     position: relative;
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #370808;
+    color: white;
+    font-weight: bold;
+    width: 15rem;
+}
+
+#goMenu {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.list {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+}
+
+.list > p {
+    margin-top: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+label, #submit {
+    margin-top: 0.8rem;
+}
+
+label {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#submit {
+    padding: 0.3rem;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.listArticle {
+    border: #370808 3px dashed;
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 25rem;
+    text-align: center;
+    padding: 0.6rem;
+    background-color: snow;
+}
+
+.listArticle > p {
+    margin-top: 0.5rem;
 }
